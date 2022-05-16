@@ -1,0 +1,1125 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://player/Em.tscn" type="PackedScene" id=1]
+[ext_resource path="res://world/ground/Ground.tscn" type="PackedScene" id=2]
+[ext_resource path="res://world/background/ParallaxBackground.tscn" type="PackedScene" id=3]
+[ext_resource path="res://enemies/stormhead/Stormhead.tscn" type="PackedScene" id=4]
+[ext_resource path="res://enemies/skeleton/Skeleton.tscn" type="PackedScene" id=5]
+[ext_resource path="res://world/decorations/Trees.tscn" type="PackedScene" id=11]
+[ext_resource path="res://world/HealthBar.gd" type="Script" id=12]
+[ext_resource path="res://world/BodySwapBar.gd" type="Script" id=13]
+[ext_resource path="res://world/decorations/hause.png" type="Texture" id=14]
+[ext_resource path="res://ui/detection_message/DetectionMessage.tscn" type="PackedScene" id=15]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.133333, 0.133333, 0.172549, 0.705882 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.105882, 0.6, 0.639216, 0.705882 )
+anti_aliasing = false
+
+[sub_resource type="Theme" id=3]
+Button/colors/font_color = Color( 0, 0, 0, 1 )
+Button/colors/font_color_disabled = Color( 0, 0, 0, 1 )
+Button/colors/font_color_hover = Color( 0, 0, 0, 1 )
+Button/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = null
+Button/styles/disabled = null
+Button/styles/focus = null
+Button/styles/hover = null
+Button/styles/normal = null
+Button/styles/pressed = null
+CheckBox/colors/font_color = Color( 0, 0, 0, 1 )
+CheckBox/colors/font_color_disabled = Color( 0, 0, 0, 1 )
+CheckBox/colors/font_color_hover = Color( 0, 0, 0, 1 )
+CheckBox/colors/font_color_hover_pressed = Color( 0, 0, 0, 1 )
+CheckBox/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+CheckBox/constants/check_vadjust = 0
+CheckBox/constants/hseparation = 4
+CheckBox/fonts/font = null
+CheckBox/icons/checked = null
+CheckBox/icons/radio_checked = null
+CheckBox/icons/radio_unchecked = null
+CheckBox/icons/unchecked = null
+CheckBox/styles/disabled = null
+CheckBox/styles/focus = null
+CheckBox/styles/hover = null
+CheckBox/styles/hover_pressed = null
+CheckBox/styles/normal = null
+CheckBox/styles/pressed = null
+CheckButton/colors/font_color = Color( 0, 0, 0, 1 )
+CheckButton/colors/font_color_disabled = Color( 0, 0, 0, 1 )
+CheckButton/colors/font_color_hover = Color( 0, 0, 0, 1 )
+CheckButton/colors/font_color_hover_pressed = Color( 0, 0, 0, 1 )
+CheckButton/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+CheckButton/constants/check_vadjust = 0
+CheckButton/constants/hseparation = 4
+CheckButton/fonts/font = null
+CheckButton/icons/off = null
+CheckButton/icons/off_disabled = null
+CheckButton/icons/on = null
+CheckButton/icons/on_disabled = null
+CheckButton/styles/disabled = null
+CheckButton/styles/focus = null
+CheckButton/styles/hover = null
+CheckButton/styles/hover_pressed = null
+CheckButton/styles/normal = null
+CheckButton/styles/pressed = null
+ColorPicker/constants/h_width = 30
+ColorPicker/constants/label_width = 10
+ColorPicker/constants/margin = 4
+ColorPicker/constants/sv_height = 256
+ColorPicker/constants/sv_width = 256
+ColorPicker/icons/add_preset = null
+ColorPicker/icons/color_hue = null
+ColorPicker/icons/color_sample = null
+ColorPicker/icons/overbright_indicator = null
+ColorPicker/icons/preset_bg = null
+ColorPicker/icons/screen_picker = null
+ColorPickerButton/colors/font_color = Color( 0, 0, 0, 1 )
+ColorPickerButton/colors/font_color_disabled = Color( 0, 0, 0, 1 )
+ColorPickerButton/colors/font_color_hover = Color( 0, 0, 0, 1 )
+ColorPickerButton/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+ColorPickerButton/constants/hseparation = 2
+ColorPickerButton/fonts/font = null
+ColorPickerButton/icons/bg = null
+ColorPickerButton/styles/disabled = null
+ColorPickerButton/styles/focus = null
+ColorPickerButton/styles/hover = null
+ColorPickerButton/styles/normal = null
+ColorPickerButton/styles/pressed = null
+Dialogs/constants/button_margin = 32
+Dialogs/constants/margin = 8
+FileDialog/colors/file_icon_modulate = Color( 0, 0, 0, 1 )
+FileDialog/colors/files_disabled = Color( 0, 0, 0, 1 )
+FileDialog/colors/folder_icon_modulate = Color( 0, 0, 0, 1 )
+FileDialog/icons/file = null
+FileDialog/icons/folder = null
+FileDialog/icons/parent_folder = null
+FileDialog/icons/reload = null
+FileDialog/icons/toggle_hidden = null
+Fonts/fonts/large = null
+Fonts/fonts/normal = null
+GraphEdit/colors/activity = Color( 0, 0, 0, 1 )
+GraphEdit/colors/grid_major = Color( 0, 0, 0, 1 )
+GraphEdit/colors/grid_minor = Color( 0, 0, 0, 1 )
+GraphEdit/colors/selection_fill = Color( 0, 0, 0, 1 )
+GraphEdit/colors/selection_stroke = Color( 0, 0, 0, 1 )
+GraphEdit/constants/bezier_len_neg = 160
+GraphEdit/constants/bezier_len_pos = 80
+GraphEdit/constants/port_grab_distance_horizontal = 48
+GraphEdit/constants/port_grab_distance_vertical = 6
+GraphEdit/icons/minimap = null
+GraphEdit/icons/minus = null
+GraphEdit/icons/more = null
+GraphEdit/icons/reset = null
+GraphEdit/icons/snap = null
+GraphEdit/styles/bg = null
+GraphEditMinimap/colors/resizer_color = Color( 0, 0, 0, 1 )
+GraphEditMinimap/icons/resizer = null
+GraphEditMinimap/styles/bg = null
+GraphEditMinimap/styles/camera = null
+GraphEditMinimap/styles/node = null
+GraphNode/colors/close_color = Color( 0, 0, 0, 1 )
+GraphNode/colors/resizer_color = Color( 0, 0, 0, 1 )
+GraphNode/colors/title_color = Color( 0, 0, 0, 1 )
+GraphNode/constants/close_offset = 18
+GraphNode/constants/port_offset = 3
+GraphNode/constants/separation = 1
+GraphNode/constants/title_offset = 20
+GraphNode/fonts/title_font = null
+GraphNode/icons/close = null
+GraphNode/icons/port = null
+GraphNode/icons/resizer = null
+GraphNode/styles/breakpoint = null
+GraphNode/styles/comment = null
+GraphNode/styles/commentfocus = null
+GraphNode/styles/defaultfocus = null
+GraphNode/styles/defaultframe = null
+GraphNode/styles/frame = null
+GraphNode/styles/position = null
+GraphNode/styles/selectedframe = null
+GridContainer/constants/hseparation = 4
+GridContainer/constants/vseparation = 4
+HBoxContainer/constants/separation = 4
+HScrollBar/icons/decrement = null
+HScrollBar/icons/decrement_highlight = null
+HScrollBar/icons/increment = null
+HScrollBar/icons/increment_highlight = null
+HScrollBar/styles/grabber = null
+HScrollBar/styles/grabber_highlight = null
+HScrollBar/styles/grabber_pressed = null
+HScrollBar/styles/scroll = null
+HScrollBar/styles/scroll_focus = null
+HSeparator/constants/separation = 4
+HSeparator/styles/separator = null
+HSlider/icons/grabber = null
+HSlider/icons/grabber_disabled = null
+HSlider/icons/grabber_highlight = null
+HSlider/icons/tick = null
+HSlider/styles/grabber_area = null
+HSlider/styles/grabber_area_highlight = null
+HSlider/styles/slider = null
+HSplitContainer/constants/autohide = 1
+HSplitContainer/constants/separation = 12
+HSplitContainer/icons/grabber = null
+HSplitContainer/styles/bg = null
+Icons/icons/close = null
+ItemList/colors/font_color = Color( 0, 0, 0, 1 )
+ItemList/colors/font_color_selected = Color( 0, 0, 0, 1 )
+ItemList/colors/guide_color = Color( 0, 0, 0, 1 )
+ItemList/constants/hseparation = 4
+ItemList/constants/icon_margin = 4
+ItemList/constants/line_separation = 2
+ItemList/constants/vseparation = 2
+ItemList/fonts/font = null
+ItemList/styles/bg = null
+ItemList/styles/bg_focus = null
+ItemList/styles/cursor = null
+ItemList/styles/cursor_unfocused = null
+ItemList/styles/selected = null
+ItemList/styles/selected_focus = null
+Label/colors/font_color = Color( 0, 0, 0, 1 )
+Label/colors/font_color_shadow = Color( 0, 0, 0, 1 )
+Label/colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+Label/constants/line_spacing = 3
+Label/constants/shadow_as_outline = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/fonts/font = null
+Label/styles/normal = null
+LineEdit/colors/clear_button_color = Color( 0, 0, 0, 1 )
+LineEdit/colors/clear_button_color_pressed = Color( 0, 0, 0, 1 )
+LineEdit/colors/cursor_color = Color( 0, 0, 0, 1 )
+LineEdit/colors/font_color = Color( 0, 0, 0, 1 )
+LineEdit/colors/font_color_selected = Color( 0, 0, 0, 1 )
+LineEdit/colors/font_color_uneditable = Color( 0, 0, 0, 1 )
+LineEdit/colors/selection_color = Color( 0, 0, 0, 1 )
+LineEdit/constants/minimum_spaces = 12
+LineEdit/fonts/font = null
+LineEdit/icons/clear = null
+LineEdit/styles/focus = null
+LineEdit/styles/normal = null
+LineEdit/styles/read_only = null
+LinkButton/colors/font_color = Color( 0, 0, 0, 1 )
+LinkButton/colors/font_color_hover = Color( 0, 0, 0, 1 )
+LinkButton/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+LinkButton/constants/underline_spacing = 2
+LinkButton/fonts/font = null
+LinkButton/styles/focus = null
+MarginContainer/constants/margin_bottom = 0
+MarginContainer/constants/margin_left = 0
+MarginContainer/constants/margin_right = 0
+MarginContainer/constants/margin_top = 0
+MenuButton/colors/font_color = Color( 0, 0, 0, 1 )
+MenuButton/colors/font_color_disabled = Color( 0, 0, 0, 1 )
+MenuButton/colors/font_color_hover = Color( 0, 0, 0, 1 )
+MenuButton/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+MenuButton/constants/hseparation = 3
+MenuButton/fonts/font = null
+MenuButton/styles/disabled = null
+MenuButton/styles/focus = null
+MenuButton/styles/hover = null
+MenuButton/styles/normal = null
+MenuButton/styles/pressed = null
+OptionButton/colors/font_color = Color( 0, 0, 0, 1 )
+OptionButton/colors/font_color_disabled = Color( 0, 0, 0, 1 )
+OptionButton/colors/font_color_hover = Color( 0, 0, 0, 1 )
+OptionButton/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+OptionButton/constants/arrow_margin = 2
+OptionButton/constants/hseparation = 2
+OptionButton/fonts/font = null
+OptionButton/icons/arrow = null
+OptionButton/styles/disabled = null
+OptionButton/styles/focus = null
+OptionButton/styles/hover = null
+OptionButton/styles/normal = null
+OptionButton/styles/pressed = null
+Panel/styles/panel = null
+PanelContainer/styles/panel = null
+PopupDialog/styles/panel = null
+PopupMenu/colors/font_color = Color( 0, 0, 0, 1 )
+PopupMenu/colors/font_color_accel = Color( 0, 0, 0, 1 )
+PopupMenu/colors/font_color_disabled = Color( 0, 0, 0, 1 )
+PopupMenu/colors/font_color_hover = Color( 0, 0, 0, 1 )
+PopupMenu/colors/font_color_separator = Color( 0, 0, 0, 1 )
+PopupMenu/constants/hseparation = 4
+PopupMenu/constants/vseparation = 4
+PopupMenu/fonts/font = null
+PopupMenu/icons/checked = null
+PopupMenu/icons/radio_checked = null
+PopupMenu/icons/radio_unchecked = null
+PopupMenu/icons/submenu = null
+PopupMenu/icons/unchecked = null
+PopupMenu/styles/hover = null
+PopupMenu/styles/labeled_separator_left = null
+PopupMenu/styles/labeled_separator_right = null
+PopupMenu/styles/panel = null
+PopupMenu/styles/panel_disabled = null
+PopupMenu/styles/separator = null
+PopupPanel/styles/panel = null
+ProgressBar/colors/font_color = Color( 0, 0, 0, 1 )
+ProgressBar/colors/font_color_shadow = Color( 0, 0, 0, 1 )
+ProgressBar/fonts/font = null
+ProgressBar/styles/bg = SubResource( 1 )
+ProgressBar/styles/fg = SubResource( 2 )
+RichTextLabel/colors/default_color = Color( 0, 0, 0, 1 )
+RichTextLabel/colors/font_color_selected = Color( 0, 0, 0, 1 )
+RichTextLabel/colors/font_color_shadow = Color( 0, 0, 0, 1 )
+RichTextLabel/colors/selection_color = Color( 0, 0, 0, 1 )
+RichTextLabel/constants/line_separation = 1
+RichTextLabel/constants/shadow_as_outline = 0
+RichTextLabel/constants/shadow_offset_x = 1
+RichTextLabel/constants/shadow_offset_y = 1
+RichTextLabel/constants/table_hseparation = 3
+RichTextLabel/constants/table_vseparation = 3
+RichTextLabel/fonts/bold_font = null
+RichTextLabel/fonts/bold_italics_font = null
+RichTextLabel/fonts/italics_font = null
+RichTextLabel/fonts/mono_font = null
+RichTextLabel/fonts/normal_font = null
+RichTextLabel/styles/focus = null
+RichTextLabel/styles/normal = null
+ScrollContainer/styles/bg = null
+SpinBox/icons/updown = null
+TabContainer/colors/font_color_bg = Color( 0, 0, 0, 1 )
+TabContainer/colors/font_color_disabled = Color( 0, 0, 0, 1 )
+TabContainer/colors/font_color_fg = Color( 0, 0, 0, 1 )
+TabContainer/constants/hseparation = 4
+TabContainer/constants/label_valign_bg = 2
+TabContainer/constants/label_valign_fg = 0
+TabContainer/constants/side_margin = 8
+TabContainer/constants/top_margin = 24
+TabContainer/fonts/font = null
+TabContainer/icons/decrement = null
+TabContainer/icons/decrement_highlight = null
+TabContainer/icons/increment = null
+TabContainer/icons/increment_highlight = null
+TabContainer/icons/menu = null
+TabContainer/icons/menu_highlight = null
+TabContainer/styles/panel = null
+TabContainer/styles/tab_bg = null
+TabContainer/styles/tab_disabled = null
+TabContainer/styles/tab_fg = null
+Tabs/colors/font_color_bg = Color( 0, 0, 0, 1 )
+Tabs/colors/font_color_disabled = Color( 0, 0, 0, 1 )
+Tabs/colors/font_color_fg = Color( 0, 0, 0, 1 )
+Tabs/constants/hseparation = 4
+Tabs/constants/label_valign_bg = 2
+Tabs/constants/label_valign_fg = 0
+Tabs/constants/top_margin = 24
+Tabs/fonts/font = null
+Tabs/icons/close = null
+Tabs/icons/decrement = null
+Tabs/icons/decrement_highlight = null
+Tabs/icons/increment = null
+Tabs/icons/increment_highlight = null
+Tabs/styles/button = null
+Tabs/styles/button_pressed = null
+Tabs/styles/panel = null
+Tabs/styles/tab_bg = null
+Tabs/styles/tab_disabled = null
+Tabs/styles/tab_fg = null
+TextEdit/colors/background_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/bookmark_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/brace_mismatch_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/breakpoint_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/caret_background_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/caret_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/code_folding_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/completion_background_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/completion_existing_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/completion_font_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/completion_scroll_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/completion_selected_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/current_line_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/executing_line_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/font_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/font_color_readonly = Color( 0, 0, 0, 1 )
+TextEdit/colors/font_color_selected = Color( 0, 0, 0, 1 )
+TextEdit/colors/function_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/line_number_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/mark_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/member_variable_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/number_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/safe_line_number_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/selection_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/symbol_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/word_highlighted_color = Color( 0, 0, 0, 1 )
+TextEdit/constants/completion_lines = 7
+TextEdit/constants/completion_max_width = 50
+TextEdit/constants/completion_scroll_width = 3
+TextEdit/constants/line_spacing = 4
+TextEdit/fonts/font = null
+TextEdit/icons/fold = null
+TextEdit/icons/folded = null
+TextEdit/icons/space = null
+TextEdit/icons/tab = null
+TextEdit/styles/completion = null
+TextEdit/styles/focus = null
+TextEdit/styles/normal = null
+TextEdit/styles/read_only = null
+ToolButton/colors/font_color = Color( 0, 0, 0, 1 )
+ToolButton/colors/font_color_disabled = Color( 0, 0, 0, 1 )
+ToolButton/colors/font_color_hover = Color( 0, 0, 0, 1 )
+ToolButton/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+ToolButton/constants/hseparation = 3
+ToolButton/fonts/font = null
+ToolButton/styles/disabled = null
+ToolButton/styles/focus = null
+ToolButton/styles/hover = null
+ToolButton/styles/normal = null
+ToolButton/styles/pressed = null
+TooltipLabel/colors/font_color = Color( 0, 0, 0, 1 )
+TooltipLabel/colors/font_color_shadow = Color( 0, 0, 0, 1 )
+TooltipLabel/constants/shadow_offset_x = 1
+TooltipLabel/constants/shadow_offset_y = 1
+TooltipLabel/fonts/font = null
+TooltipPanel/styles/panel = null
+Tree/colors/custom_button_font_highlight = Color( 0, 0, 0, 1 )
+Tree/colors/drop_position_color = Color( 0, 0, 0, 1 )
+Tree/colors/font_color = Color( 0, 0, 0, 1 )
+Tree/colors/font_color_selected = Color( 0, 0, 0, 1 )
+Tree/colors/guide_color = Color( 0, 0, 0, 1 )
+Tree/colors/relationship_line_color = Color( 0, 0, 0, 1 )
+Tree/colors/title_button_color = Color( 0, 0, 0, 1 )
+Tree/constants/button_margin = 4
+Tree/constants/draw_guides = 1
+Tree/constants/draw_relationship_lines = 0
+Tree/constants/hseparation = 4
+Tree/constants/item_margin = 12
+Tree/constants/scroll_border = 4
+Tree/constants/scroll_speed = 12
+Tree/constants/vseparation = 4
+Tree/fonts/font = null
+Tree/fonts/title_button_font = null
+Tree/icons/arrow = null
+Tree/icons/arrow_collapsed = null
+Tree/icons/checked = null
+Tree/icons/select_arrow = null
+Tree/icons/unchecked = null
+Tree/icons/updown = null
+Tree/styles/bg = null
+Tree/styles/bg_focus = null
+Tree/styles/button_pressed = null
+Tree/styles/cursor = null
+Tree/styles/cursor_unfocused = null
+Tree/styles/custom_button = null
+Tree/styles/custom_button_hover = null
+Tree/styles/custom_button_pressed = null
+Tree/styles/selected = null
+Tree/styles/selected_focus = null
+Tree/styles/title_button_hover = null
+Tree/styles/title_button_normal = null
+Tree/styles/title_button_pressed = null
+VBoxContainer/constants/separation = 4
+VScrollBar/icons/decrement = null
+VScrollBar/icons/decrement_highlight = null
+VScrollBar/icons/increment = null
+VScrollBar/icons/increment_highlight = null
+VScrollBar/styles/grabber = null
+VScrollBar/styles/grabber_highlight = null
+VScrollBar/styles/grabber_pressed = null
+VScrollBar/styles/scroll = null
+VScrollBar/styles/scroll_focus = null
+VSeparator/constants/separation = 4
+VSeparator/styles/separator = null
+VSlider/icons/grabber = null
+VSlider/icons/grabber_disabled = null
+VSlider/icons/grabber_highlight = null
+VSlider/icons/tick = null
+VSlider/styles/grabber_area = null
+VSlider/styles/grabber_area_highlight = null
+VSlider/styles/slider = null
+VSplitContainer/constants/autohide = 1
+VSplitContainer/constants/separation = 12
+VSplitContainer/icons/grabber = null
+VSplitContainer/styles/bg = null
+WindowDialog/colors/title_color = Color( 0, 0, 0, 1 )
+WindowDialog/constants/close_h_ofs = 18
+WindowDialog/constants/close_v_ofs = 18
+WindowDialog/constants/scaleborder_size = 4
+WindowDialog/constants/title_height = 20
+WindowDialog/fonts/title_font = null
+WindowDialog/icons/close = null
+WindowDialog/icons/close_highlight = null
+WindowDialog/styles/panel = null
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.133333, 0.133333, 0.172549, 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.694118, 0.0980392, 0.596078, 0.705882 )
+anti_aliasing = false
+
+[sub_resource type="Theme" id=6]
+Button/colors/font_color = Color( 0, 0, 0, 1 )
+Button/colors/font_color_disabled = Color( 0, 0, 0, 1 )
+Button/colors/font_color_hover = Color( 0, 0, 0, 1 )
+Button/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = null
+Button/styles/disabled = null
+Button/styles/focus = null
+Button/styles/hover = null
+Button/styles/normal = null
+Button/styles/pressed = null
+CheckBox/colors/font_color = Color( 0, 0, 0, 1 )
+CheckBox/colors/font_color_disabled = Color( 0, 0, 0, 1 )
+CheckBox/colors/font_color_hover = Color( 0, 0, 0, 1 )
+CheckBox/colors/font_color_hover_pressed = Color( 0, 0, 0, 1 )
+CheckBox/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+CheckBox/constants/check_vadjust = 0
+CheckBox/constants/hseparation = 4
+CheckBox/fonts/font = null
+CheckBox/icons/checked = null
+CheckBox/icons/radio_checked = null
+CheckBox/icons/radio_unchecked = null
+CheckBox/icons/unchecked = null
+CheckBox/styles/disabled = null
+CheckBox/styles/focus = null
+CheckBox/styles/hover = null
+CheckBox/styles/hover_pressed = null
+CheckBox/styles/normal = null
+CheckBox/styles/pressed = null
+CheckButton/colors/font_color = Color( 0, 0, 0, 1 )
+CheckButton/colors/font_color_disabled = Color( 0, 0, 0, 1 )
+CheckButton/colors/font_color_hover = Color( 0, 0, 0, 1 )
+CheckButton/colors/font_color_hover_pressed = Color( 0, 0, 0, 1 )
+CheckButton/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+CheckButton/constants/check_vadjust = 0
+CheckButton/constants/hseparation = 4
+CheckButton/fonts/font = null
+CheckButton/icons/off = null
+CheckButton/icons/off_disabled = null
+CheckButton/icons/on = null
+CheckButton/icons/on_disabled = null
+CheckButton/styles/disabled = null
+CheckButton/styles/focus = null
+CheckButton/styles/hover = null
+CheckButton/styles/hover_pressed = null
+CheckButton/styles/normal = null
+CheckButton/styles/pressed = null
+ColorPicker/constants/h_width = 30
+ColorPicker/constants/label_width = 10
+ColorPicker/constants/margin = 4
+ColorPicker/constants/sv_height = 256
+ColorPicker/constants/sv_width = 256
+ColorPicker/icons/add_preset = null
+ColorPicker/icons/color_hue = null
+ColorPicker/icons/color_sample = null
+ColorPicker/icons/overbright_indicator = null
+ColorPicker/icons/preset_bg = null
+ColorPicker/icons/screen_picker = null
+ColorPickerButton/colors/font_color = Color( 0, 0, 0, 1 )
+ColorPickerButton/colors/font_color_disabled = Color( 0, 0, 0, 1 )
+ColorPickerButton/colors/font_color_hover = Color( 0, 0, 0, 1 )
+ColorPickerButton/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+ColorPickerButton/constants/hseparation = 2
+ColorPickerButton/fonts/font = null
+ColorPickerButton/icons/bg = null
+ColorPickerButton/styles/disabled = null
+ColorPickerButton/styles/focus = null
+ColorPickerButton/styles/hover = null
+ColorPickerButton/styles/normal = null
+ColorPickerButton/styles/pressed = null
+Dialogs/constants/button_margin = 32
+Dialogs/constants/margin = 8
+FileDialog/colors/file_icon_modulate = Color( 0, 0, 0, 1 )
+FileDialog/colors/files_disabled = Color( 0, 0, 0, 1 )
+FileDialog/colors/folder_icon_modulate = Color( 0, 0, 0, 1 )
+FileDialog/icons/file = null
+FileDialog/icons/folder = null
+FileDialog/icons/parent_folder = null
+FileDialog/icons/reload = null
+FileDialog/icons/toggle_hidden = null
+Fonts/fonts/large = null
+Fonts/fonts/normal = null
+GraphEdit/colors/activity = Color( 0, 0, 0, 1 )
+GraphEdit/colors/grid_major = Color( 0, 0, 0, 1 )
+GraphEdit/colors/grid_minor = Color( 0, 0, 0, 1 )
+GraphEdit/colors/selection_fill = Color( 0, 0, 0, 1 )
+GraphEdit/colors/selection_stroke = Color( 0, 0, 0, 1 )
+GraphEdit/constants/bezier_len_neg = 160
+GraphEdit/constants/bezier_len_pos = 80
+GraphEdit/constants/port_grab_distance_horizontal = 48
+GraphEdit/constants/port_grab_distance_vertical = 6
+GraphEdit/icons/minimap = null
+GraphEdit/icons/minus = null
+GraphEdit/icons/more = null
+GraphEdit/icons/reset = null
+GraphEdit/icons/snap = null
+GraphEdit/styles/bg = null
+GraphEditMinimap/colors/resizer_color = Color( 0, 0, 0, 1 )
+GraphEditMinimap/icons/resizer = null
+GraphEditMinimap/styles/bg = null
+GraphEditMinimap/styles/camera = null
+GraphEditMinimap/styles/node = null
+GraphNode/colors/close_color = Color( 0, 0, 0, 1 )
+GraphNode/colors/resizer_color = Color( 0, 0, 0, 1 )
+GraphNode/colors/title_color = Color( 0, 0, 0, 1 )
+GraphNode/constants/close_offset = 18
+GraphNode/constants/port_offset = 3
+GraphNode/constants/separation = 1
+GraphNode/constants/title_offset = 20
+GraphNode/fonts/title_font = null
+GraphNode/icons/close = null
+GraphNode/icons/port = null
+GraphNode/icons/resizer = null
+GraphNode/styles/breakpoint = null
+GraphNode/styles/comment = null
+GraphNode/styles/commentfocus = null
+GraphNode/styles/defaultfocus = null
+GraphNode/styles/defaultframe = null
+GraphNode/styles/frame = null
+GraphNode/styles/position = null
+GraphNode/styles/selectedframe = null
+GridContainer/constants/hseparation = 4
+GridContainer/constants/vseparation = 4
+HBoxContainer/constants/separation = 4
+HScrollBar/icons/decrement = null
+HScrollBar/icons/decrement_highlight = null
+HScrollBar/icons/increment = null
+HScrollBar/icons/increment_highlight = null
+HScrollBar/styles/grabber = null
+HScrollBar/styles/grabber_highlight = null
+HScrollBar/styles/grabber_pressed = null
+HScrollBar/styles/scroll = null
+HScrollBar/styles/scroll_focus = null
+HSeparator/constants/separation = 4
+HSeparator/styles/separator = null
+HSlider/icons/grabber = null
+HSlider/icons/grabber_disabled = null
+HSlider/icons/grabber_highlight = null
+HSlider/icons/tick = null
+HSlider/styles/grabber_area = null
+HSlider/styles/grabber_area_highlight = null
+HSlider/styles/slider = null
+HSplitContainer/constants/autohide = 1
+HSplitContainer/constants/separation = 12
+HSplitContainer/icons/grabber = null
+HSplitContainer/styles/bg = null
+Icons/icons/close = null
+ItemList/colors/font_color = Color( 0, 0, 0, 1 )
+ItemList/colors/font_color_selected = Color( 0, 0, 0, 1 )
+ItemList/colors/guide_color = Color( 0, 0, 0, 1 )
+ItemList/constants/hseparation = 4
+ItemList/constants/icon_margin = 4
+ItemList/constants/line_separation = 2
+ItemList/constants/vseparation = 2
+ItemList/fonts/font = null
+ItemList/styles/bg = null
+ItemList/styles/bg_focus = null
+ItemList/styles/cursor = null
+ItemList/styles/cursor_unfocused = null
+ItemList/styles/selected = null
+ItemList/styles/selected_focus = null
+Label/colors/font_color = Color( 0, 0, 0, 1 )
+Label/colors/font_color_shadow = Color( 0, 0, 0, 1 )
+Label/colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+Label/constants/line_spacing = 3
+Label/constants/shadow_as_outline = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/fonts/font = null
+Label/styles/normal = null
+LineEdit/colors/clear_button_color = Color( 0, 0, 0, 1 )
+LineEdit/colors/clear_button_color_pressed = Color( 0, 0, 0, 1 )
+LineEdit/colors/cursor_color = Color( 0, 0, 0, 1 )
+LineEdit/colors/font_color = Color( 0, 0, 0, 1 )
+LineEdit/colors/font_color_selected = Color( 0, 0, 0, 1 )
+LineEdit/colors/font_color_uneditable = Color( 0, 0, 0, 1 )
+LineEdit/colors/selection_color = Color( 0, 0, 0, 1 )
+LineEdit/constants/minimum_spaces = 12
+LineEdit/fonts/font = null
+LineEdit/icons/clear = null
+LineEdit/styles/focus = null
+LineEdit/styles/normal = null
+LineEdit/styles/read_only = null
+LinkButton/colors/font_color = Color( 0, 0, 0, 1 )
+LinkButton/colors/font_color_hover = Color( 0, 0, 0, 1 )
+LinkButton/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+LinkButton/constants/underline_spacing = 2
+LinkButton/fonts/font = null
+LinkButton/styles/focus = null
+MarginContainer/constants/margin_bottom = 0
+MarginContainer/constants/margin_left = 0
+MarginContainer/constants/margin_right = 0
+MarginContainer/constants/margin_top = 0
+MenuButton/colors/font_color = Color( 0, 0, 0, 1 )
+MenuButton/colors/font_color_disabled = Color( 0, 0, 0, 1 )
+MenuButton/colors/font_color_hover = Color( 0, 0, 0, 1 )
+MenuButton/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+MenuButton/constants/hseparation = 3
+MenuButton/fonts/font = null
+MenuButton/styles/disabled = null
+MenuButton/styles/focus = null
+MenuButton/styles/hover = null
+MenuButton/styles/normal = null
+MenuButton/styles/pressed = null
+OptionButton/colors/font_color = Color( 0, 0, 0, 1 )
+OptionButton/colors/font_color_disabled = Color( 0, 0, 0, 1 )
+OptionButton/colors/font_color_hover = Color( 0, 0, 0, 1 )
+OptionButton/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+OptionButton/constants/arrow_margin = 2
+OptionButton/constants/hseparation = 2
+OptionButton/fonts/font = null
+OptionButton/icons/arrow = null
+OptionButton/styles/disabled = null
+OptionButton/styles/focus = null
+OptionButton/styles/hover = null
+OptionButton/styles/normal = null
+OptionButton/styles/pressed = null
+Panel/styles/panel = null
+PanelContainer/styles/panel = null
+PopupDialog/styles/panel = null
+PopupMenu/colors/font_color = Color( 0, 0, 0, 1 )
+PopupMenu/colors/font_color_accel = Color( 0, 0, 0, 1 )
+PopupMenu/colors/font_color_disabled = Color( 0, 0, 0, 1 )
+PopupMenu/colors/font_color_hover = Color( 0, 0, 0, 1 )
+PopupMenu/colors/font_color_separator = Color( 0, 0, 0, 1 )
+PopupMenu/constants/hseparation = 4
+PopupMenu/constants/vseparation = 4
+PopupMenu/fonts/font = null
+PopupMenu/icons/checked = null
+PopupMenu/icons/radio_checked = null
+PopupMenu/icons/radio_unchecked = null
+PopupMenu/icons/submenu = null
+PopupMenu/icons/unchecked = null
+PopupMenu/styles/hover = null
+PopupMenu/styles/labeled_separator_left = null
+PopupMenu/styles/labeled_separator_right = null
+PopupMenu/styles/panel = null
+PopupMenu/styles/panel_disabled = null
+PopupMenu/styles/separator = null
+PopupPanel/styles/panel = null
+ProgressBar/colors/font_color = Color( 0, 0, 0, 1 )
+ProgressBar/colors/font_color_shadow = Color( 0, 0, 0, 1 )
+ProgressBar/fonts/font = null
+ProgressBar/styles/bg = SubResource( 4 )
+ProgressBar/styles/fg = SubResource( 5 )
+RichTextLabel/colors/default_color = Color( 0, 0, 0, 1 )
+RichTextLabel/colors/font_color_selected = Color( 0, 0, 0, 1 )
+RichTextLabel/colors/font_color_shadow = Color( 0, 0, 0, 1 )
+RichTextLabel/colors/selection_color = Color( 0, 0, 0, 1 )
+RichTextLabel/constants/line_separation = 1
+RichTextLabel/constants/shadow_as_outline = 0
+RichTextLabel/constants/shadow_offset_x = 1
+RichTextLabel/constants/shadow_offset_y = 1
+RichTextLabel/constants/table_hseparation = 3
+RichTextLabel/constants/table_vseparation = 3
+RichTextLabel/fonts/bold_font = null
+RichTextLabel/fonts/bold_italics_font = null
+RichTextLabel/fonts/italics_font = null
+RichTextLabel/fonts/mono_font = null
+RichTextLabel/fonts/normal_font = null
+RichTextLabel/styles/focus = null
+RichTextLabel/styles/normal = null
+ScrollContainer/styles/bg = null
+SpinBox/icons/updown = null
+TabContainer/colors/font_color_bg = Color( 0, 0, 0, 1 )
+TabContainer/colors/font_color_disabled = Color( 0, 0, 0, 1 )
+TabContainer/colors/font_color_fg = Color( 0, 0, 0, 1 )
+TabContainer/constants/hseparation = 4
+TabContainer/constants/label_valign_bg = 2
+TabContainer/constants/label_valign_fg = 0
+TabContainer/constants/side_margin = 8
+TabContainer/constants/top_margin = 24
+TabContainer/fonts/font = null
+TabContainer/icons/decrement = null
+TabContainer/icons/decrement_highlight = null
+TabContainer/icons/increment = null
+TabContainer/icons/increment_highlight = null
+TabContainer/icons/menu = null
+TabContainer/icons/menu_highlight = null
+TabContainer/styles/panel = null
+TabContainer/styles/tab_bg = null
+TabContainer/styles/tab_disabled = null
+TabContainer/styles/tab_fg = null
+Tabs/colors/font_color_bg = Color( 0, 0, 0, 1 )
+Tabs/colors/font_color_disabled = Color( 0, 0, 0, 1 )
+Tabs/colors/font_color_fg = Color( 0, 0, 0, 1 )
+Tabs/constants/hseparation = 4
+Tabs/constants/label_valign_bg = 2
+Tabs/constants/label_valign_fg = 0
+Tabs/constants/top_margin = 24
+Tabs/fonts/font = null
+Tabs/icons/close = null
+Tabs/icons/decrement = null
+Tabs/icons/decrement_highlight = null
+Tabs/icons/increment = null
+Tabs/icons/increment_highlight = null
+Tabs/styles/button = null
+Tabs/styles/button_pressed = null
+Tabs/styles/panel = null
+Tabs/styles/tab_bg = null
+Tabs/styles/tab_disabled = null
+Tabs/styles/tab_fg = null
+TextEdit/colors/background_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/bookmark_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/brace_mismatch_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/breakpoint_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/caret_background_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/caret_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/code_folding_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/completion_background_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/completion_existing_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/completion_font_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/completion_scroll_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/completion_selected_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/current_line_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/executing_line_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/font_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/font_color_readonly = Color( 0, 0, 0, 1 )
+TextEdit/colors/font_color_selected = Color( 0, 0, 0, 1 )
+TextEdit/colors/function_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/line_number_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/mark_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/member_variable_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/number_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/safe_line_number_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/selection_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/symbol_color = Color( 0, 0, 0, 1 )
+TextEdit/colors/word_highlighted_color = Color( 0, 0, 0, 1 )
+TextEdit/constants/completion_lines = 7
+TextEdit/constants/completion_max_width = 50
+TextEdit/constants/completion_scroll_width = 3
+TextEdit/constants/line_spacing = 4
+TextEdit/fonts/font = null
+TextEdit/icons/fold = null
+TextEdit/icons/folded = null
+TextEdit/icons/space = null
+TextEdit/icons/tab = null
+TextEdit/styles/completion = null
+TextEdit/styles/focus = null
+TextEdit/styles/normal = null
+TextEdit/styles/read_only = null
+ToolButton/colors/font_color = Color( 0, 0, 0, 1 )
+ToolButton/colors/font_color_disabled = Color( 0, 0, 0, 1 )
+ToolButton/colors/font_color_hover = Color( 0, 0, 0, 1 )
+ToolButton/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+ToolButton/constants/hseparation = 3
+ToolButton/fonts/font = null
+ToolButton/styles/disabled = null
+ToolButton/styles/focus = null
+ToolButton/styles/hover = null
+ToolButton/styles/normal = null
+ToolButton/styles/pressed = null
+TooltipLabel/colors/font_color = Color( 0, 0, 0, 1 )
+TooltipLabel/colors/font_color_shadow = Color( 0, 0, 0, 1 )
+TooltipLabel/constants/shadow_offset_x = 1
+TooltipLabel/constants/shadow_offset_y = 1
+TooltipLabel/fonts/font = null
+TooltipPanel/styles/panel = null
+Tree/colors/custom_button_font_highlight = Color( 0, 0, 0, 1 )
+Tree/colors/drop_position_color = Color( 0, 0, 0, 1 )
+Tree/colors/font_color = Color( 0, 0, 0, 1 )
+Tree/colors/font_color_selected = Color( 0, 0, 0, 1 )
+Tree/colors/guide_color = Color( 0, 0, 0, 1 )
+Tree/colors/relationship_line_color = Color( 0, 0, 0, 1 )
+Tree/colors/title_button_color = Color( 0, 0, 0, 1 )
+Tree/constants/button_margin = 4
+Tree/constants/draw_guides = 1
+Tree/constants/draw_relationship_lines = 0
+Tree/constants/hseparation = 4
+Tree/constants/item_margin = 12
+Tree/constants/scroll_border = 4
+Tree/constants/scroll_speed = 12
+Tree/constants/vseparation = 4
+Tree/fonts/font = null
+Tree/fonts/title_button_font = null
+Tree/icons/arrow = null
+Tree/icons/arrow_collapsed = null
+Tree/icons/checked = null
+Tree/icons/select_arrow = null
+Tree/icons/unchecked = null
+Tree/icons/updown = null
+Tree/styles/bg = null
+Tree/styles/bg_focus = null
+Tree/styles/button_pressed = null
+Tree/styles/cursor = null
+Tree/styles/cursor_unfocused = null
+Tree/styles/custom_button = null
+Tree/styles/custom_button_hover = null
+Tree/styles/custom_button_pressed = null
+Tree/styles/selected = null
+Tree/styles/selected_focus = null
+Tree/styles/title_button_hover = null
+Tree/styles/title_button_normal = null
+Tree/styles/title_button_pressed = null
+VBoxContainer/constants/separation = 4
+VScrollBar/icons/decrement = null
+VScrollBar/icons/decrement_highlight = null
+VScrollBar/icons/increment = null
+VScrollBar/icons/increment_highlight = null
+VScrollBar/styles/grabber = null
+VScrollBar/styles/grabber_highlight = null
+VScrollBar/styles/grabber_pressed = null
+VScrollBar/styles/scroll = null
+VScrollBar/styles/scroll_focus = null
+VSeparator/constants/separation = 4
+VSeparator/styles/separator = null
+VSlider/icons/grabber = null
+VSlider/icons/grabber_disabled = null
+VSlider/icons/grabber_highlight = null
+VSlider/icons/tick = null
+VSlider/styles/grabber_area = null
+VSlider/styles/grabber_area_highlight = null
+VSlider/styles/slider = null
+VSplitContainer/constants/autohide = 1
+VSplitContainer/constants/separation = 12
+VSplitContainer/icons/grabber = null
+VSplitContainer/styles/bg = null
+WindowDialog/colors/title_color = Color( 0, 0, 0, 1 )
+WindowDialog/constants/close_h_ofs = 18
+WindowDialog/constants/close_v_ofs = 18
+WindowDialog/constants/scaleborder_size = 4
+WindowDialog/constants/title_height = 20
+WindowDialog/fonts/title_font = null
+WindowDialog/icons/close = null
+WindowDialog/icons/close_highlight = null
+WindowDialog/styles/panel = null
+
+[node name="World" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 105.157, 215.439 )
+scale = Vector2( 2, 2 )
+current = true
+smoothing_enabled = true
+smoothing_speed = 6.0
+
+[node name="ParallaxBackground" parent="." instance=ExtResource( 3 )]
+
+[node name="hause" type="Sprite" parent="."]
+position = Vector2( 92.6233, 151.273 )
+scale = Vector2( 3.79195, 3.79195 )
+texture = ExtResource( 14 )
+
+[node name="entities" type="Node2D" parent="."]
+position = Vector2( 2.82849, 42.4264 )
+
+[node name="Skeleton3" parent="entities" instance=ExtResource( 5 )]
+position = Vector2( 2649.47, 120.718 )
+
+[node name="Skeleton4" parent="entities" instance=ExtResource( 5 )]
+position = Vector2( 2824.52, 128.485 )
+
+[node name="Skeleton5" parent="entities" instance=ExtResource( 5 )]
+position = Vector2( 3371.55, 124.236 )
+
+[node name="Skeleton6" parent="entities" instance=ExtResource( 5 )]
+position = Vector2( 3446.18, 128.169 )
+
+[node name="Skeleton7" parent="entities" instance=ExtResource( 5 )]
+position = Vector2( 3513.71, 126.752 )
+
+[node name="Skeleton8" parent="entities" instance=ExtResource( 5 )]
+position = Vector2( 3596.61, 128.016 )
+
+[node name="Skeleton9" parent="entities" instance=ExtResource( 5 )]
+position = Vector2( 3705.27, 127.263 )
+
+[node name="Skeleton2" parent="entities" instance=ExtResource( 5 )]
+position = Vector2( 2500.62, 125.045 )
+
+[node name="Skeleton" parent="entities" instance=ExtResource( 5 )]
+position = Vector2( 2053.43, 124.372 )
+
+[node name="Stormhead" parent="entities" instance=ExtResource( 4 )]
+position = Vector2( 3870.56, 126.407 )
+
+[node name="Stormhead2" parent="entities" instance=ExtResource( 4 )]
+position = Vector2( 5571.48, -508.391 )
+
+[node name="Skeleton10" parent="entities" instance=ExtResource( 5 )]
+position = Vector2( 5352.17, -512.234 )
+
+[node name="Skeleton11" parent="entities" instance=ExtResource( 5 )]
+position = Vector2( 5432.66, -514.551 )
+
+[node name="Skeleton12" parent="entities" instance=ExtResource( 5 )]
+position = Vector2( 5665.06, -515.853 )
+
+[node name="Skeleton13" parent="entities" instance=ExtResource( 5 )]
+position = Vector2( 5509.69, -512.602 )
+
+[node name="Stormhead3" parent="entities" instance=ExtResource( 4 )]
+position = Vector2( 5735.35, -1.53449 )
+
+[node name="Stormhead4" parent="entities" instance=ExtResource( 4 )]
+position = Vector2( 5932.41, -3.45342 )
+
+[node name="Stormhead5" parent="entities" instance=ExtResource( 4 )]
+position = Vector2( 5636.59, 0.895119 )
+
+[node name="Em" parent="entities" instance=ExtResource( 1 )]
+position = Vector2( 102.329, 193.013 )
+
+[node name="Remote" type="RemoteTransform2D" parent="entities/Em"]
+position = Vector2( 0, -10 )
+remote_path = NodePath("../../../Camera2D")
+
+[node name="Trees2" parent="." instance=ExtResource( 11 )]
+position = Vector2( 0, 30 )
+scale = Vector2( 3, 3 )
+tile_data = PoolIntArray( 6, 2, 0, 10, 0, 0, 13, 3, 0, 16, 1, 0, 21, 0, 0, 27, 0, 0 )
+
+[node name="Trees" parent="." instance=ExtResource( 11 )]
+position = Vector2( 159.833, 234.889 )
+scale = Vector2( 2, 2 )
+tile_data = PoolIntArray( -589765, 2, 0, -524232, 2, 0, -524230, 2, 0, -262096, 1, 0, -196564, 1, 0, -196562, 1, 0, -3, 3, 0, -65536, 2, 0, -65534, 1, 0, -65528, 1, 0, -65523, 0, 0, -65515, 0, 0, -65508, 1, 0, -65505, 1, 0, -65499, 1, 0, -65495, 1, 0, 22, 0, 0 )
+
+[node name="Ground" parent="." instance=ExtResource( 2 )]
+position = Vector2( 8.90463, 42.7955 )
+tile_data = PoolIntArray( -1048494, -1073741793, 0, -1048493, 1610612745, 0, -1048492, 1610612745, 0, -1048491, 1610612745, 0, -1048490, 1610612745, 0, -1048489, 1610612745, 0, -1048488, 1610612745, 0, -1048487, 1610612745, 0, -1048486, 1610612745, 0, -1048485, 1610612745, 0, -1048484, 1610612745, 0, -1048483, 1610612745, 0, -982957, 1610612752, 0, -982956, 1610612745, 0, -982955, 1610612745, 0, -982954, 1610612745, 0, -982953, 1610612745, 0, -982952, 1610612745, 0, -982951, 1610612745, 0, -982950, 1610612745, 0, -982949, 1610612745, 0, -982948, 9, 0, -982947, 9, 0, -917416, 1610612747, 0, -917415, 1610612768, 0, -917414, 1610612745, 0, -917413, 1610612745, 0, -917412, 9, 0, -917411, 9, 0, -851878, -1073741806, 0, -851877, 1610612745, 0, -851876, 9, 0, -851875, 9, 0, -786341, -1073741811, 0, -786340, 9, 0, -786339, 9, 0, -720805, -1073741793, 0, -720804, 9, 0, -720803, 9, 0, -720802, 9, 0, -720801, 9, 0, -720800, 9, 0, -720799, 9, 0, -655269, 19, 0, -655268, 9, 0, -655267, 9, 0, -655266, 9, 0, -655265, 9, 0, -655264, 9, 0, -655263, 9, 0, -589741, 1, 0, -589740, 2, 0, -589737, 1, 0, -589736, 0, 0, -589735, 10, 0, -589734, 35, 0, -589733, -1073741791, 0, -589732, 9, 0, -589731, 9, 0, -589730, 9, 0, -589729, 9, 0, -589728, 1610612745, 0, -589727, 9, 0, -524215, -1610612726, 0, -524207, 19, 0, -524206, 33, 0, -524205, 33, 0, -524204, 33, 0, -524203, 33, 0, -524202, 34, 0, -524201, 33, 0, -524200, 33, 0, -524199, 33, 0, -524198, 34, 0, -524197, 9, 0, -524196, 9, 0, -524195, 9, 0, -524194, 9, 0, -524193, 9, 0, -524192, 1610612745, 0, -524191, 9, 0, -458679, -1610612722, 0, -458673, 11, 0, -458672, 1610612768, 0, -458671, 9, 0, -458670, 1610612745, 0, -458669, 1610612745, 0, -458668, 1610612745, 0, -458667, 1610612745, 0, -458666, 1610612745, 0, -458665, 1610612745, 0, -458664, 9, 0, -458663, 9, 0, -458662, 9, 0, -458661, 9, 0, -458660, 9, 0, -458659, 9, 0, -458658, 9, 0, -458657, 9, 0, -458656, 1610612745, 0, -458655, 9, 0, -393143, -1073741806, 0, -393142, 17, 0, -393139, 10, 0, -393138, 14, 0, -393137, 9, 0, -393136, 32, 0, -393135, 1610612747, 0, -393134, 1610612768, 0, -393133, 1610612745, 0, -393132, 1610612745, 0, -393131, 1610612745, 0, -393130, 1610612745, 0, -393129, 1610612745, 0, -393128, 9, 0, -393127, 9, 0, -393126, 9, 0, -393125, 9, 0, -393124, 9, 0, -393123, 9, 0, -393122, 9, 0, -393121, 9, 0, -393120, 1610612745, 0, -393119, 9, 0, -327606, -1073741806, 0, -327605, 15, 0, -327604, 12, 0, -327602, -1073741806, 0, -327601, 9, 0, -327600, 9, 0, -327599, 16, 0, -327593, 1610612748, 0, -327592, 1610612771, 0, -327591, 1610612746, 0, -327589, 1610612748, 0, -327588, 1610612771, 0, -327587, 9, 0, -327586, 9, 0, -327585, 9, 0, -327584, 1610612745, 0, -327583, 9, 0, -262067, 10, 0, -262066, 14, 0, -262065, 9, 0, -262064, 9, 0, -262063, 9, 0, -262062, 9, 0, -262061, 20, 0, -262060, 21, 0, -262059, 16, 0, -262051, 9, 0, -262050, 9, 0, -262049, 9, 0, -262048, 1610612745, 0, -262047, 9, 0, -196534, 3, 0, -196533, 6, 0, -196532, 19, 0, -196531, 9, 0, -196530, 9, 0, -196529, 9, 0, -196528, 9, 0, -196527, 1610612745, 0, -196526, 1610612745, 0, -196525, 1610612745, 0, -196524, 1610612745, 0, -196523, 1610612745, 0, -196522, 1610612745, 0, -196521, 1610612745, 0, -196520, 1610612750, 0, -196519, 1610612746, 0, -196515, 9, 0, -196514, 9, 0, -196513, 9, 0, -196512, 1610612745, 0, -196511, 9, 0, -65544, 0, 0, -65543, 0, 0, -131000, 10, 0, -130999, 14, 0, -130998, 20, 0, -130997, 21, 0, -130996, 9, 0, -130995, 9, 0, -130994, 9, 0, -130993, 9, 0, -130992, 9, 0, -130991, 9, 0, -130990, 9, 0, -130989, 9, 0, -130988, 9, 0, -130987, 9, 0, -130986, 1610612750, 0, -130985, 1610612771, 0, -130980, 1610612748, 0, -130979, 1610612771, 0, -130978, 9, 0, -130977, 9, 0, -130976, 9, 0, -130975, 9, 0, -8, 9, 0, -7, 9, 0, -6, -1610612726, 0, -65468, 3, 0, -65467, 5, 0, -65466, 10, 0, -65465, 14, 0, -65464, 9, 0, -65463, 9, 0, -65462, 9, 0, -65461, 9, 0, -65460, 9, 0, -65459, 9, 0, -65458, 9, 0, -65457, 9, 0, -65456, 9, 0, -65455, 9, 0, -65454, 9, 0, -65453, 9, 0, -65452, 9, 0, -65451, 3, 0, -65450, 6, 0, -65449, 0, 0, -65448, 0, 0, -65447, 0, 0, -65446, 0, 0, -65445, 0, 0, -65444, 6, 0, -65443, 4, 0, -65442, 9, 0, -65441, 9, 0, -65440, 9, 0, -65439, 9, 0, 65528, 9, 0, 65529, 9, 0, 65530, -1610612722, 0, 17, 1, 0, 18, 0, 0, 19, 536870917, 0, 20, 5, 0, 66, 10, 0, 67, 14, 0, 68, 22, 0, 69, 22, 0, 70, 9, 0, 71, 9, 0, 72, 9, 0, 73, 9, 0, 74, 9, 0, 75, 9, 0, 76, 9, 0, 77, 9, 0, 78, 9, 0, 79, 9, 0, 80, 9, 0, 81, 26, 0, 82, 26, 0, 83, 26, 0, 84, 26, 0, 85, 26, 0, 86, 26, 0, 87, 26, 0, 88, 26, 0, 89, 26, 0, 90, 26, 0, 91, 26, 0, 92, 26, 0, 93, 26, 0, 94, 26, 0, 95, 26, 0, 96, 26, 0, 97, 26, 0, 131064, 9, 0, 131065, 9, 0, 131066, -1610612727, 0, 131067, 17, 0, 65551, 10, 0, 65552, 14, 0, 65553, 22, 0, 65554, 536870937, 0, 65555, 536870935, 0, 65556, 536870934, 0, 65557, 15, 0, 65558, 12, 0, 65559, 0, 0, 65560, 0, 0, 65561, 0, 0, 65564, 10, 0, 65565, 536870922, 0, 65566, 1, 0, 65567, 0, 0, 65568, 2, 0, 65572, 1, 0, 65573, 0, 0, 65574, 0, 0, 65575, 0, 0, 65576, 6, 0, 65577, 5, 0, 65578, 0, 0, 65580, 6, 0, 65582, 6, 0, 65583, 4, 0, 65584, 30, 0, 65585, 6, 0, 65587, 1, 0, 65588, 6, 0, 65589, 0, 0, 65590, 0, 0, 65591, 0, 0, 65592, 6, 0, 65593, 0, 0, 65594, 0, 0, 65595, 0, 0, 65596, 2, 0, 65597, 6, 0, 65598, 5, 0, 65599, 1, 0, 65600, 10, 0, 65601, 14, 0, 65602, 9, 0, 65603, 9, 0, 65604, 9, 0, 65605, 9, 0, 65606, 9, 0, 65607, 9, 0, 65608, 9, 0, 65609, 9, 0, 65610, 9, 0, 65611, 9, 0, 65612, 9, 0, 65613, 9, 0, 65614, 9, 0, 65615, 9, 0, 65616, 9, 0, 65617, 27, 0, 65618, 27, 0, 65619, 27, 0, 65620, 27, 0, 65621, 27, 0, 65622, 27, 0, 65623, 27, 0, 65624, 27, 0, 65625, 27, 0, 65626, 27, 0, 65627, 27, 0, 65628, 27, 0, 65629, 27, 0, 65630, 27, 0, 65631, 27, 0, 65632, 27, 0, 65633, 27, 0, 196600, 9, 0, 196601, 9, 0, 196602, 9, 0, 196603, 9, 0, 196604, 15, 0, 196605, 12, 0, 196607, 0, 0, 131075, 1, 0, 131076, 0, 0, 131077, 0, 0, 131078, 1, 0, 131079, 3, 0, 131080, 6, 0, 131081, 5, 0, 131082, 0, 0, 131083, 0, 0, 131084, 10, 0, 131085, 536870927, 0, 131086, 21, 0, 131087, 9, 0, 131088, 9, 0, 131089, 9, 0, 131090, 9, 0, 131091, 9, 0, 131092, 9, 0, 131093, 9, 0, 131094, 9, 0, 131095, 23, 0, 131096, 25, 0, 131097, 24, 0, 131098, 15, 0, 131099, 14, 0, 131100, 9, 0, 131101, 9, 0, 131102, 20, 0, 131103, 34, 0, 131104, 21, 0, 131105, 22, 0, 131106, 23, 0, 131107, 25, 0, 131108, 24, 0, 131109, 20, 0, 131110, 34, 0, 131111, 34, 0, 131112, 25, 0, 131113, 22, 0, 131114, 20, 0, 131115, 34, 0, 131116, 34, 0, 131117, 25, 0, 131118, 25, 0, 131119, 25, 0, 131120, 24, 0, 131121, 34, 0, 131122, 34, 0, 131123, 25, 0, 131124, 34, 0, 131125, 24, 0, 131126, 34, 0, 131127, 34, 0, 131128, 34, 0, 131129, 25, 0, 131130, 34, 0, 131131, 34, 0, 131132, 34, 0, 131133, 34, 0, 131134, 34, 0, 131135, 34, 0, 131136, 21, 0, 131137, 9, 0, 131138, 9, 0, 131139, 9, 0, 131140, 9, 0, 131141, 9, 0, 131142, 9, 0, 131143, 9, 0, 131144, 9, 0, 131145, 9, 0, 131146, 9, 0, 131147, 9, 0, 131148, 9, 0, 131149, 9, 0, 131150, 9, 0, 131151, 9, 0, 131152, 1610612745, 0, 131153, 28, 0, 131154, 28, 0, 131155, 28, 0, 131156, 28, 0, 131157, 28, 0, 131158, 28, 0, 131159, 28, 0, 131160, 28, 0, 131161, 28, 0, 131162, 28, 0, 131163, 28, 0, 131164, 28, 0, 131165, 28, 0, 131166, 28, 0, 131167, 28, 0, 131168, 28, 0, 131169, 28, 0, 262136, 9, 0, 262137, 9, 0, 262138, 9, 0, 262139, 9, 0, 262140, 9, 0, 262141, -1610612715, 0, 262142, 34, 0, 262143, 33, 0, 196608, 21, 0, 196609, 23, 0, 196610, 25, 0, 196611, 25, 0, 196612, 24, 0, 196613, 22, 0, 196614, 20, 0, 196615, 34, 0, 196616, 21, 0, 196617, 33, 0, 196618, 20, 0, 196619, 34, 0, 196620, 21, 0, 196621, 9, 0, 196622, 9, 0, 196623, 9, 0, 196624, 9, 0, 196625, 9, 0, 196626, 9, 0, 196627, 9, 0, 196628, 9, 0, 196629, 9, 0, 196630, 9, 0, 196631, 9, 0, 196632, 9, 0, 196633, 9, 0, 196634, 9, 0, 196635, 9, 0, 196636, 9, 0, 196637, 9, 0, 196638, 9, 0, 196639, 9, 0, 196640, 9, 0, 196641, 9, 0, 196642, 9, 0, 196643, 9, 0, 196644, 9, 0, 196645, 9, 0, 196646, 9, 0, 196647, 9, 0, 196648, 9, 0, 196649, 9, 0, 196650, 9, 0, 196651, 9, 0, 196652, 9, 0, 196653, 9, 0, 196654, 9, 0, 196655, 9, 0, 196656, 9, 0, 196657, 9, 0, 196658, 9, 0, 196659, 9, 0, 196660, 9, 0, 196661, 9, 0, 196662, 9, 0, 196663, 9, 0, 196664, 9, 0, 196665, 9, 0, 196666, 9, 0, 196667, 9, 0, 196668, 9, 0, 196669, 9, 0, 196670, 9, 0, 196671, 9, 0, 196672, 9, 0, 196673, 9, 0, 196674, 9, 0, 196675, 9, 0, 196676, 9, 0, 196677, 9, 0, 327672, 9, 0, 327673, 9, 0, 327674, 9, 0, 327675, 9, 0, 327676, 9, 0, 327677, 9, 0, 327678, 9, 0, 327679, 9, 0, 262144, 9, 0, 262145, 9, 0, 262146, 9, 0, 262147, 9, 0, 262148, 9, 0, 262149, 9, 0, 262150, 9, 0, 262151, 9, 0, 262152, 9, 0, 262153, 9, 0, 262154, 9, 0, 262155, 9, 0, 262156, 9, 0, 262157, 9, 0, 262158, 9, 0, 262159, 9, 0, 262160, 9, 0, 262161, 9, 0, 262162, 9, 0, 262163, 9, 0, 262164, 9, 0, 262165, 9, 0, 262166, 9, 0, 262167, 9, 0, 262168, 9, 0, 262169, 9, 0, 262170, 9, 0, 262171, 9, 0, 262172, 9, 0, 262173, 9, 0, 262174, 9, 0, 262175, 9, 0, 262176, 9, 0, 262177, 9, 0, 262178, 9, 0, 262179, 9, 0, 262180, 9, 0, 262181, 9, 0, 262182, 9, 0, 262183, 9, 0, 262184, 9, 0, 262185, 9, 0, 262186, 9, 0, 262187, 9, 0, 262188, 9, 0, 262189, 9, 0, 262190, 9, 0, 262191, 9, 0, 262192, 9, 0, 262193, 9, 0, 262194, 9, 0, 262195, 9, 0, 262196, 9, 0, 262197, 9, 0, 262198, 9, 0, 262199, 9, 0, 262200, 9, 0, 262201, 9, 0, 262202, 9, 0, 262203, 9, 0, 262204, 9, 0, 262205, 9, 0, 262206, 9, 0, 262207, 9, 0, 262208, 9, 0, 262209, 9, 0, 262210, 9, 0, 262211, 9, 0, 393205, 7, 0, 393208, 26, 0, 393209, 26, 0, 393210, 26, 0, 393211, 26, 0, 393212, 26, 0, 393213, 26, 0, 393214, 26, 0, 393215, 26, 0, 327680, 26, 0, 327681, 26, 0, 327682, 26, 0, 327683, 26, 0, 327684, 26, 0, 327685, 26, 0, 327686, 26, 0, 327687, 26, 0, 327688, 26, 0, 327689, 26, 0, 327690, 26, 0, 327691, 26, 0, 327692, 26, 0, 327693, 26, 0, 327694, 26, 0, 327695, 26, 0, 327696, 26, 0, 327697, 26, 0, 327698, 26, 0, 327699, 26, 0, 327700, 26, 0, 327701, 26, 0, 327702, 26, 0, 327703, 26, 0, 327704, 26, 0, 327705, 26, 0, 327706, 26, 0, 327707, 26, 0, 327708, 26, 0, 327709, 26, 0, 327710, 26, 0, 327711, 26, 0, 327712, 26, 0, 327713, 26, 0, 327714, 26, 0, 327715, 26, 0, 327716, 26, 0, 327717, 26, 0, 327718, 26, 0, 327719, 26, 0, 327720, 26, 0, 327721, 26, 0, 327722, 26, 0, 327723, 26, 0, 327724, 26, 0, 327725, 26, 0, 327726, 26, 0, 327727, 26, 0, 327728, 26, 0, 327729, 26, 0, 327730, 26, 0, 327731, 26, 0, 327732, 26, 0, 327733, 26, 0, 327734, 26, 0, 327735, 26, 0, 327736, 26, 0, 327737, 26, 0, 327738, 26, 0, 327739, 26, 0, 327740, 26, 0, 327741, 26, 0, 327742, 26, 0, 327743, 26, 0 )
+
+[node name="ui" type="Node2D" parent="."]
+
+[node name="nothing_to_see_here" parent="ui" instance=ExtResource( 15 )]
+position = Vector2( -222.113, 175.832 )
+
+[node name="Message" parent="ui/nothing_to_see_here" index="1"]
+margin_left = -3.97388
+margin_top = -16.6793
+margin_right = 105.026
+margin_bottom = 14.3207
+text = "Nothing to see here :(
+try the other way?"
+
+[node name="a_nice_tree" parent="ui" instance=ExtResource( 15 )]
+position = Vector2( 396.554, 215.297 )
+
+[node name="CollisionShape2D" parent="ui/a_nice_tree/Area2D" index="0"]
+position = Vector2( 0, -0.529724 )
+
+[node name="Message" parent="ui/a_nice_tree" index="1"]
+margin_left = -44.2335
+margin_top = -59.5876
+margin_right = 53.7665
+margin_bottom = -28.5876
+text = "Oh, what a nice tree!
+Adventure awaits..."
+
+[node name="jump_instructions" parent="ui" instance=ExtResource( 15 )]
+position = Vector2( 947, 150.727 )
+
+[node name="Message" parent="ui/jump_instructions" index="1"]
+margin_left = -64.3633
+margin_top = -36.8092
+margin_right = 63.6367
+margin_bottom = -5.80915
+text = "Use top arrow key to jump
+press a [^] key!"
+
+[node name="warning_first_monster" parent="ui" instance=ExtResource( 15 )]
+position = Vector2( 1589.19, 145.454 )
+
+[node name="Message" parent="ui/warning_first_monster" index="1"]
+visible = true
+margin_left = -82.8037
+margin_top = -62.6947
+margin_right = 83.1963
+margin_bottom = -26.6947
+text = "Oh no! There is a monster nearby!
+Em can't fight monsters!
+Hold [x] key to awake the warior!
+DON'T move while changing!"
+
+[node name="first_attack" parent="ui" instance=ExtResource( 15 )]
+position = Vector2( 1801.21, 153.4 )
+
+[node name="Message" parent="ui/first_attack" index="1"]
+margin_left = -124.223
+margin_top = -52.1713
+margin_right = 126.777
+margin_bottom = -21.1714
+text = "A wariors soul can be joined together with you for 
+limited amount of time, attack quickly!
+
+Use [c] key to attack"
+
+[node name="also" parent="ui" instance=ExtResource( 15 )]
+position = Vector2( 4814.38, -108.456 )
+
+[node name="Message" parent="ui/also" index="1"]
+margin_left = -32.0497
+margin_top = -46.874
+margin_right = 61.9503
+margin_bottom = -15.874
+text = "Tip: Warior soul has
+better jumping abilities"
+
+[node name="there_is_more" parent="ui" instance=ExtResource( 15 )]
+position = Vector2( 2224.6, 144.943 )
+
+[node name="Message" parent="ui/there_is_more" index="1"]
+margin_left = -62.8341
+margin_top = -33.6548
+margin_right = 71.1659
+margin_bottom = 11.3452
+text = "Not so quick sadly
+More enemies are on the way
+to regenerate, press [c] on the
+skeleton remains"
+
+[node name="Thanks" parent="ui" instance=ExtResource( 15 )]
+position = Vector2( 5382.64, -237.082 )
+
+[node name="Message" parent="ui/Thanks" index="1"]
+margin_left = -91.6073
+margin_top = -16.84
+margin_right = 88.3927
+margin_bottom = 19.16
+text = "Thanks for playing my game
+I didn't have time to build a bigger  map
+so I'm leaving you with this.. "
+
+[node name="cya" parent="ui" instance=ExtResource( 15 )]
+position = Vector2( 5635.2, -175.371 )
+
+[node name="Message" parent="ui/cya" index="1"]
+margin_left = -45.6449
+margin_top = -42.2958
+margin_right = 47.3551
+margin_bottom = -11.2958
+text = "Have fun ;)"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HealthBar" type="ProgressBar" parent="CanvasLayer"]
+margin_left = 11.4001
+margin_top = 7.79071
+margin_right = 91.4001
+margin_bottom = 12.7907
+grow_horizontal = 0
+theme = SubResource( 3 )
+percent_visible = false
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BodySwapBar" type="ProgressBar" parent="CanvasLayer"]
+margin_left = 223.204
+margin_top = 7.6337
+margin_right = 303.204
+margin_bottom = 12.6337
+rect_pivot_offset = Vector2( 40, 2.5 )
+theme = SubResource( 6 )
+percent_visible = false
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[editable path="ui/nothing_to_see_here"]
+[editable path="ui/a_nice_tree"]
+[editable path="ui/jump_instructions"]
+[editable path="ui/warning_first_monster"]
+[editable path="ui/first_attack"]
+[editable path="ui/also"]
+[editable path="ui/there_is_more"]
+[editable path="ui/Thanks"]
+[editable path="ui/cya"]
